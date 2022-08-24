@@ -1,0 +1,15 @@
+﻿Avance del Proyecto Final (INF)
+==============================================================================
+
+Avance de la Unidad 1
+----------------------------------------------------------------------------
+1.- Información General: Titulo, descripción, alcance, EDT, cronograma
+2.- Requerimientos: Funcionales y No funcionales
+3.- Analisis: Casos de uso, Prototipos, Diagrama de secuencia (Opcional)
+4.- Diseño: Modelo Fisico, diccionaro de datos y el script para SQL Server.
+
+
+
+
+
+
