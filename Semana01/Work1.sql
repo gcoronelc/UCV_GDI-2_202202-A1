@@ -23,3 +23,4 @@ from rh..empleado e
 join rh..departamento d on e.iddepartamento=d.iddepartamento
 group by d.iddepartamento, d.nombre;
 go
+
