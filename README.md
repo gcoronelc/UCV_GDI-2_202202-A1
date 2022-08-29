@@ -20,6 +20,7 @@
 - Blog: www.desarrollasoftware.com
 - Youtube: www.youtube.com/DesarrollaSoftware
 - Cooreo: ecoronelca@ucvvirtual.edu.pe
+- Facebook: www.facebook.com/groups/desarrollasoftware
 
 
 
