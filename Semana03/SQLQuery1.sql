@@ -66,3 +66,92 @@ de 4 notas, solo se promedian las 3 mejores.
 */
 
 
+/*
+Función de tabla en linea
+*/
+
+CREATE FUNCTION dbo.fn_empleados ( @p_dpto int ) 
+RETURNS TABLE 
+AS RETURN 
+SELECT idempleado, apellido, nombre 
+FROM dbo.empleado 
+WHERE iddepartamento = @p_dpto; 
+GO
+
+select * from dbo.fn_empleados(102);
+go
+
+
+/*
+FUNCION DE TABLA DE MULTIPLES INSTRUCCIONES
+*/
+
+
+CREATE FUNCTION dbo.fn_catalogo ( ) 
+RETURNS @tabla TABLE ( 
+	codigo int identity(1,1) primary key not null, 
+	nombre varchar(50) not null, 
+	precio money not null 
+) AS 
+BEGIN 
+	INSERT INTO @tabla(nombre,precio) values('Televisor', 1500.00); 
+	INSERT INTO @tabla(nombre,precio) values('Refrigeradora', 1450.00); 
+	INSERT INTO @tabla(nombre,precio) values('Lavadora', 1350.00); 
+	RETURN; 
+END; 
+GO
+
+SELECT * FROM dbo.fn_catalogo();
+GO
+
+/*
+Ejercicio
+Se necesita un resumen de ventas por curso.
+BD: EDUCA
+*/
+
+ALTER FUNCTION dbo.fnResumen ( ) 
+RETURNS @tabla TABLE ( 
+	id int primary key not null, 
+	nombre varchar(100) not null, 
+	vacantes int not null,
+	matriculados int not null,
+	disponibles int not null default 0,
+	proyectado decimal(12,2) not null default 0,
+	recaudado decimal(12,2) not null default 0
+) AS 
+BEGIN 
+	-- Datos base
+	INSERT INTO @tabla(id, nombre, vacantes, matriculados)
+	select cur_id, cur_nombre, cur_vacantes, cur_matriculados
+	from dbo.CURSO
+	-- Vacantes disponible
+	update @tabla set disponibles = vacantes - matriculados;
+	-- Ingresos proyectados
+	update @tabla
+	set proyectado = isnull((select sum(mat_precio) from dbo.MATRICULA m
+					  where m.cur_id = t.id),0)
+	from @tabla t
+	-- Ingresos recaudados
+	update @tabla
+	set recaudado = isnull((select sum(pag_importe) from dbo.PAGO p
+					  where p.cur_id = t.id),0)
+	from @tabla t
+	RETURN; 
+END; 
+GO
+
+select * from dbo.fnResumen();
+go
+
+select * from dbo.PAGO;
+go
+
+SELECT * FROM DBO.MATRICULA;
+GO
+
+select * from educa..CURSO;
+go
+
+
+
