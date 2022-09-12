@@ -59,12 +59,6 @@ GO
 select dbo.FACTORIALR(5) factorial;
 go
 
-/*
-Ejercicio:
-Desarrollar una función para calcular el promedio 
-de 4 notas, solo se promedian las 3 mejores.
-*/
-
 
 /*
 Función de tabla en linea
@@ -154,4 +148,26 @@ select * from educa..CURSO;
 go
 
 
+/*
+Ejercicio:
+Desarrollar una función para calcular el promedio 
+de 4 notas, solo se promedian las 3 mejores.
+*/
+
+ALTER FUNCTION dbo.fnPromedio(@nota1 INT, @nota2 INT, @nota3 INT, @nota4 INT)RETURNS INTBEGIN  Declare @menor INT, @promedio INT  SET @menor = IIF(@nota1<@nota2,@nota1,@nota2);  SET @menor = IIF(@nota3<@menor,@nota3,@menor);  SET @menor = IIF(@nota4<@menor,@nota4,@menor);  SET @promedio = (@nota1 + @nota2 + @nota3 + @nota4 - @menor) / 3;  RETURN @promedio;END;
+GO
+
+select dbo.fnPromedio(5,14,17,16) promedio;
+go
+
+/*
+Desarrollar una función que permita convertir soles a dólares y viceversa.
+*/
+
+
+ALTER FUNCTION dbo.fnCambio(@importe DECIMAL(12,4), @moneda INT)RETURNS DECIMAL(12,4)BEGIN  Declare @cambio DECIMAL(12,4), @valorCambio DECIMAL(12,4);  SET @valorCambio = 3.88;  SET @cambio = @importe * CASE @moneda WHEN 1 THEN 1/@valorCambio WHEN 2 THEN @valorCambio ELSE 0 END;  RETURN @cambio;END;
+GO
+
+SELECT dbo.fnCambio(1000,3) CAMBIO;
+GO
 
