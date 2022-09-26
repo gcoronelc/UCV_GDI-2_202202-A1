@@ -77,3 +77,10 @@ JOIN Northwind..Customers C ON V1.CustomerID=C.CustomerID
 JOIN Northwind..Products P ON V1.ProductID=P.ProductID
 ORDER BY 1, 2
 GO
+
+
+-- Problema 10
+
+withv1 as (select p.ProductName 'NOMBRE DEL PRODUCTO', sum(od.UnitPrice*od.Quantity) 'IMPORTE DE VENTAS'from Northwind..Products p	join Northwind..[Order Details] od on od.ProductID = p.ProductIDgroup by ProductName),v2 as (select sum(v1.[IMPORTE DE VENTAS]) TOTAL from v1)select v1.*, v1.[IMPORTE DE VENTAS]*100.0/v2.TOTAL 'PORCENTAJE DEL TOTAL'from v1 cross join v2order by 1go
+
+
