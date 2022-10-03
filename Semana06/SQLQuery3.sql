@@ -28,10 +28,11 @@ set statistics io on;
 set statistics time on;
 
 -- CREATE INDEX ProductosNombre ON PRODUCTOS(ProductName);
--- DROP INDEX PRODUCTS.ProductosNombre
+-- DROP INDEX PRODUCTOS.ProductosNombre
 
 
-select * from PRODUCTOS P
+select * 
+from PRODUCTOS P 
 where p.ProductName='Queso Cabrales';
 -- 1ms
 -- 42 Lecturas

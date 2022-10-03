@@ -9,7 +9,11 @@ Avance de la Unidad 1
 4.- Diseño: Modelo Fisico, diccionaro de datos y el script para SQL Server.
 
 
-
+Avance de Unidad 2
+----------------------------------------------------------------------------
+1.- Levantar observaciones del informe 1
+2.- Completar el informe 
+3.- Programación de los procesos de negocio con SP
 
 
 
