@@ -4,7 +4,7 @@
 INDICADORES
  - Cantidad de lecturas lógicas
  - El tiempo de respuesta
- - Fragmentación de tanla e indices.
+ - Fragmentación de los indices.
 
 Se debe tomar en cuenta que los datos se guardan en paginas.
 El tamaño de una pagina es 8Kb
