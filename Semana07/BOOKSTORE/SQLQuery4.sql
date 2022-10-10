@@ -19,38 +19,79 @@ AS
 */
 
 
-CREATE PROCEDURE USP_VENTA
+ALTER PROCEDURE USP_VENTA
 (
 	@CLIENTE VARCHAR(150),
 	@IDPUBLICACION CHAR(8),
 	@CANTIDAD INT,
 	@IDEMPLEADO INT,
 	@IDVENTA INT OUT,
-	@IDESTADO INT OUT
+	@ESTADO INT OUT
 )
 AS
 	DECLARE @PORCDCTO DECIMAL(5,2),     @DCTO MONEY,    @SUBTOTAL MONEY,
-	        @IMPUESTO MONEY,            @TOTAL MONEY,   @PRECIO MONEY
+	        @IMPUESTO MONEY,            @TOTAL MONEY,   @PRECIO MONEY,
+			@CONT INT;
 BEGIN 
-	TRY
+	SET @ESTADO = 0;
+	BEGIN TRY
 		-- Paso 1
 		BEGIN TRANSACTION;
+		-- Paso 2: Verificar publicación
+		SELECT @CONT = COUNT(1) FROM PUBLICACION
+		WHERE idpublicacion=@IDPUBLICACION;
+		IF(@CONT=0) 
+		BEGIN
+			SET @ESTADO = 1;
+			THROW 51000, 'No existe la publicación.', 1;
+		END;
 		-- Paso 6: Obtener porcentaje de descuento
 		SELECT @PORCDCTO = porcentaje FROM PROMOCION
 		WHERE @CANTIDAD>= cantmin AND @CANTIDAD<=cantmax;
-		-- paso 7: Calcular venta
+		-- Paso 7: Calcular venta
 		SELECT @PRECIO = PRECIO FROM PUBLICACION
 		WHERE idpublicacion = @IDPUBLICACION;
 		SET @DCTO = @PRECIO * @CANTIDAD * @PORCDCTO;
 		SET @TOTAL = @PRECIO * @CANTIDAD - @DCTO;
-		-- Paso 10 
+		SET @SUBTOTAL = @TOTAL / 1.18;
+		SET @IMPUESTO = @TOTAL - @SUBTOTAL;
+		-- Paso 8: Registrar venta
+		SELECT @IDVENTA = CAST(valor as int) + 1 FROM CONTROL
+		WHERE parametro='VENTA';
+		UPDATE CONTROL SET valor = CAST(@IDVENTA AS VARCHAR(20))
+		WHERE parametro='VENTA';
+		INSERT INTO VENTA(idventa,cliente,fecha,idempleado,idpublicacion,
+			cantidad,precio, dcto, subtotal,impuesto,total) 
+		VALUES(@IDVENTA,@CLIENTE,GETDATE(),@IDEMPLEADO,@IDPUBLICACION,
+			@CANTIDAD,@PRECIO,@DCTO,@SUBTOTAL,@IMPUESTO,@TOTAL);
+		-- Paso 9:  Actualizar stock
+		UPDATE PUBLICACION
+		SET stock = stock - @CANTIDAD
+		WHERE idpublicacion = @IDPUBLICACION;
+		-- Pasp 10: Confirmar Tx
 		COMMIT TRANSACTION; 
 	END TRY 
 	BEGIN CATCH 
+		SELECT ERROR_NUMBER() AS Numero_de_Error, ERROR_SEVERITY() AS Gravedad_del_Error, ERROR_STATE() AS Estado_del_Error, ERROR_PROCEDURE() AS Procedimiento_del_Error, ERROR_LINE() AS Linea_de_Error, ERROR_MESSAGE() AS Mensaje_de_Error;
+		IF(@ESTADO=0) SET @ESTADO = 4;
 		ROLLBACK TRANSACTION; 
 	END CATCH
 END;
 GO
 
+DECLARE @IDVENTA INT, @ESTADO INT;
+EXEC USP_VENTA 'Gustavo','LIB00044',10,4,@IDVENTA out, @ESTADO out;
+PRINT 'IDVENTA: ' + CAST(@IDVENTA AS VARCHAR(20));
+PRINT 'ESTADO: ' + CAST(@ESTADO AS VARCHAR(20));
+GO
+
 SELECT * FROM PROMOCION;
 SELECT * FROM CONTROL;
+select * from publicacion;
+select * from empleado;
+SELECT * FROM VENTA ORDER BY 1 DESC;
+SELECT GETDATE();
+
+UPDATE CONTROL SET valor = '5000' WHERE parametro='VENTA';
+
+
