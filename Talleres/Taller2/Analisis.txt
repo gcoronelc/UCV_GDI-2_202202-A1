@@ -1,0 +1,26 @@
+ANALISIS DE PROCESOS
+-------------------------------------------
+1.- Ingreso del paciente
+
+
+
+2.- Alta del paciente
+
+
+
+3.- Registrar visitas medicas
+
+
+
+ANALISIS DE ENTIDADES
+-------------------------------------------
+- PACIENTE
+- MEDICO
+- ENFERMERO
+- HISTORIAL DEL PACIENTE 
+- HISTORIAL DE VISITAS
+- EMPLEADO
+- ESPECIALIDAD
+
+
+
