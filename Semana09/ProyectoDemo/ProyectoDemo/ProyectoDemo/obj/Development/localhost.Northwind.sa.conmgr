@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.Northwind.sa"
+  DTS:DTSID="{BB95B664-FA02-464B-867B-67069DB3A9DD}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=Northwind;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-ProyectoDemo-{BB95B664-FA02-464B-867B-67069DB3A9DD}localhost.Northwind.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUzaj4GSqaEe5ao0te7r9YgAAAAACAAAAAAAQZgAAAAEAACAAAADD4oVt7zkDuwpNzuf+YyxHUUhxPGx1HxQpOTewlES+ewAAAAAOgAAAAAIAACAAAADYmfRBabbtyGD6YTuPLjsPLbZh7WAnyICPMWQoUryDunAAAACN0hxVlOT2njFzMdihiuX4Yla1VSsorkZcFasYNh4CIe6FYBuAUk3ytcYfJ8vWfZslyZJSRI865f1gxuc5S2hARKIt9Jza0ftQFDf+nkmIwesGITS6rhfWfAZOo+jeXrsihlqXCF9PPrI7bv75fSCqQAAAAFnniHHKmdhgmahvlO0ok7z9vpgJH4yoEwHVKkgk+xJOAf1kojm7jqWVsE2YoCwy3DWpMM7b2KYKBxQ+ElcmL38=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
