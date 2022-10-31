@@ -1,0 +1,37 @@
+
+- Software
+- Documentacion
+- Procedimientos almacenados con Visual Studio
+- Detalle de ejecución correcta
+- Manual de usuario
+- Procesos que intervienen en el sistema sería importante para que los vea reflejados
+- Las interfaces del sistema y su correcto uso y funcionamiento
+
+
+OBTENER 20
+--------------------------------------------------
+Demostrar el flujo del negocio en la aplicación.
+
+
+CASO DE ATENCION AMBULATORIA DE UNA CLINICA CON RESERVA
+----------------------------------------------------------
+1.- Reservar una cita (Estado: reserva) (Tabla: CITA)
+2.- Confirmar cita (Realiza el pago) (Estado: Activa) (Tablas: CITA, COMPROBANTE)
+3.- Atención medica (Estado: Atendido) (Tablas: CITA, ATENCION)
+
+CASO DE ATENCION AMBULATORIA DE UNA CLINICA SIN RESERVA
+----------------------------------------------------------
+1.- Realizar cita en el dia. (Con pago) (Estado: Activa) (Tablas: CITA, COMPROBANTE)
+3.- Atención medica (Estado: Atendido) (Tablas: CITA, ATENCION)
+
+
+OTROS PROCESOS
+------------------------------------------------
+- Anular cita
+- Postergar cita 
+- Cambiar de médico
+
+
+
+
+
