@@ -1,0 +1,9 @@
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\bin\Debug\Eureka2022.exe.config
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\bin\Debug\Eureka2022.exe
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\bin\Debug\Eureka2022.pdb
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\obj\Debug\Eureka2022.csproj.AssemblyReference.cache
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\obj\Debug\Eureka2022.Properties.Resources.resources
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\obj\Debug\Eureka2022.csproj.GenerateResource.cache
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\obj\Debug\Eureka2022.csproj.CoreCompileInputs.cache
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\obj\Debug\Eureka2022.exe
+D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\Eureka2022\obj\Debug\Eureka2022.pdb
