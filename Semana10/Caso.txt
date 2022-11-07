@@ -13,11 +13,14 @@ OBTENER 20
 Demostrar el flujo del negocio en la aplicación.
 
 
+
 CASO DE ATENCION AMBULATORIA DE UNA CLINICA CON RESERVA
 ----------------------------------------------------------
 1.- Reservar una cita (Estado: reserva) (Tabla: CITA)
 2.- Confirmar cita (Realiza el pago) (Estado: Activa) (Tablas: CITA, COMPROBANTE)
 3.- Atención medica (Estado: Atendido) (Tablas: CITA, ATENCION)
+
+
 
 CASO DE ATENCION AMBULATORIA DE UNA CLINICA SIN RESERVA
 ----------------------------------------------------------
@@ -30,6 +33,21 @@ OTROS PROCESOS
 - Anular cita
 - Postergar cita 
 - Cambiar de médico
+
+
+BIBLIOTECA: FLUJO DE LECTURA EN SALA
+-----------------------------------------------------
+1.- Consultar libro, obtener el codigo del libro.
+2.- Registrar prestamos en atencion al usuario
+3.- Registrar devolucion dde libro
+
+
+BIBLIOTECA: PRESTAMO DE LIBRO A DOMICILIO
+------------------------------------------------------
+1.- Consultar libro, obtener el codigo del libro.
+2.- Registrar prestamos en atencion al usuario, y especificar la fecha y hora de devolución.
+3.- Registrar devolucion dde libro y verificar si existe penalidad.
+4.- Pagar penalidad
 
 
 
