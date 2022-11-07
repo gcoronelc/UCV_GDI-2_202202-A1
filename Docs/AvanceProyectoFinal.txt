@@ -18,3 +18,40 @@ Avance de Unidad 2
 
 
 
+
+Avance de Unidad 3
+----------------------------------------------------------------------------
+1.- Levantar observaciones del informe 2
+2.- Completar el informe 
+3.- Programación de los procesos de negocio con SP
+4.- Implementar la aplicación con Visual Studio y C#
+5.- Enlace de video de exposición
+
+En la exposición se debe demostrar flujos de negocio.
+
+Cita medica
+------------------------------------------------------
+1.- Reservar cita (estado: reservada)
+2.- Pagar cita (estado: activa)
+3.- Atencion medica (estado: atendida)
+
+Tienda de artefactos electrodomesticos
+-------------------------------------------------------
+1.- Registrar venta (Vendedor) (estado: proceso)
+2.- Pagar venta (Caja) (estado: realizada)
+3.- Despachar productos (despacho) (estado: comcluida)
+
+Sistema de Almacen: Entrega de materiales(exito)
+-----------------------------------------------------
+1.- Solicitud de materiales
+2.- Entrega de materiales
+
+Sistema de Almacen: Entrega de materiales (cancelado)
+-----------------------------------------------------
+1.- Solicitud de materiales
+2.- Anular solicitud
+
+Sistema de Almacen: Ingreso de materiales
+-----------------------------------------------------
+1.- Pedido de materiales
+2.- Registro de ingreso de materiales
