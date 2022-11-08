@@ -1,5 +1,0 @@
-D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\CapaService\obj\Debug\netcoreapp3.1\CapaService.csproj.AssemblyReference.cache
-D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\CapaService\obj\Debug\netcoreapp3.1\CapaService.GeneratedMSBuildEditorConfig.editorconfig
-D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\CapaService\obj\Debug\netcoreapp3.1\CapaService.AssemblyInfoInputs.cache
-D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\CapaService\obj\Debug\netcoreapp3.1\CapaService.AssemblyInfo.cs
-D:\GITHUB\UCV\UCV_GDI-2_202202-A1\Semana11\Eureka\Eureka2022\CapaService\obj\Debug\netcoreapp3.1\CapaService.csproj.CoreCompileInputs.cache
