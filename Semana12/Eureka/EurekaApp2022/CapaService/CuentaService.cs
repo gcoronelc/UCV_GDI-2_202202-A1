@@ -27,7 +27,7 @@ namespace CapaService
                     // El comando
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "dbo.USP_CREAR_CUENTA";
+                    cmd.CommandText = "dbo.USP_UCV_GPO_A_CREAR_CUENTA";
                     // Parametros
                     cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar).Value = cliente;
                     cmd.Parameters.Add("@MONEDA", SqlDbType.VarChar).Value = moneda;

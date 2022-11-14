@@ -15,18 +15,20 @@ namespace EurekaApp2022
         [STAThread]
         static void Main()
         {
-            CuentaService service = new CuentaService();
-            string cuenta = service.CrearCuenta("00015", "01", 8000.0, "123456", "0006");
-            string mensaje = cuenta + " | " + service.Estado + " | " + service.Mensaje;
-            MessageBox.Show("Resultado: " + mensaje);
-
 
             /*
+            CuentaService service = new CuentaService();
+            string cuenta = service.CrearCuenta("00015", "01", -8000.0, "123456", "0004");
+            string mensaje = cuenta + " | " + service.Estado + " | " + service.Mensaje;
+            MessageBox.Show("Resultado: " + mensaje);
+            */
+
+            
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            */
+            Application.Run(new FormLogon());
+            
         }
     }
 }
