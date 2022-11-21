@@ -109,5 +109,12 @@ namespace EurekaApp2022
             view.MdiParent = this;
             view.Show();
         }
+
+        private void menuConsultasMovimientos_Click(object sender, EventArgs e)
+        {
+            FormConsultaMovimientos view = FormConsultaMovimientos.GetInstance();
+            view.MdiParent = this;
+            view.Show();
+        }
     }
 }

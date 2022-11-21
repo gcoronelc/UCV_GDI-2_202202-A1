@@ -64,6 +64,7 @@ namespace EurekaApp2022
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.menuConsultasMovimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -210,7 +211,8 @@ namespace EurekaApp2022
             // menuConsultas
             // 
             this.menuConsultas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuConsultasPersonas});
+            this.menuConsultasPersonas,
+            this.menuConsultasMovimientos});
             this.menuConsultas.Name = "menuConsultas";
             this.menuConsultas.Size = new System.Drawing.Size(86, 24);
             this.menuConsultas.Text = "Consultas";
@@ -344,6 +346,13 @@ namespace EurekaApp2022
             this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Estado";
             // 
+            // menuConsultasMovimientos
+            // 
+            this.menuConsultasMovimientos.Name = "menuConsultasMovimientos";
+            this.menuConsultasMovimientos.Size = new System.Drawing.Size(224, 26);
+            this.menuConsultasMovimientos.Text = "Movimientos";
+            this.menuConsultasMovimientos.Click += new System.EventHandler(this.menuConsultasMovimientos_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -403,6 +412,7 @@ namespace EurekaApp2022
         private System.Windows.Forms.ToolStripMenuItem utilitariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuConsultasPersonas;
+        private System.Windows.Forms.ToolStripMenuItem menuConsultasMovimientos;
     }
 }
 
