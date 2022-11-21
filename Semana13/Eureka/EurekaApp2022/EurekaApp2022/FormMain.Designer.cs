@@ -44,6 +44,14 @@ namespace EurekaApp2022
             this.printSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProcesos = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProcesosCrearCuenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuConsultas = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuConsultasPersonas = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarClaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -56,8 +64,6 @@ namespace EurekaApp2022
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.menuProcesos = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuProcesosCrearCuenta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -68,7 +74,11 @@ namespace EurekaApp2022
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
-            this.menuProcesos});
+            this.menuProcesos,
+            this.tablasToolStripMenuItem,
+            this.menuConsultas,
+            this.reportesToolStripMenuItem,
+            this.utilitariosToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
@@ -176,6 +186,62 @@ namespace EurekaApp2022
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
+            // menuProcesos
+            // 
+            this.menuProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuProcesosCrearCuenta});
+            this.menuProcesos.Name = "menuProcesos";
+            this.menuProcesos.Size = new System.Drawing.Size(81, 24);
+            this.menuProcesos.Text = "Procesos";
+            // 
+            // menuProcesosCrearCuenta
+            // 
+            this.menuProcesosCrearCuenta.Name = "menuProcesosCrearCuenta";
+            this.menuProcesosCrearCuenta.Size = new System.Drawing.Size(175, 26);
+            this.menuProcesosCrearCuenta.Text = "Crear cuenta";
+            this.menuProcesosCrearCuenta.Click += new System.EventHandler(this.menuProcesosCrearCuenta_Click);
+            // 
+            // tablasToolStripMenuItem
+            // 
+            this.tablasToolStripMenuItem.Name = "tablasToolStripMenuItem";
+            this.tablasToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.tablasToolStripMenuItem.Text = "Tablas";
+            // 
+            // menuConsultas
+            // 
+            this.menuConsultas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuConsultasPersonas});
+            this.menuConsultas.Name = "menuConsultas";
+            this.menuConsultas.Size = new System.Drawing.Size(86, 24);
+            this.menuConsultas.Text = "Consultas";
+            // 
+            // menuConsultasPersonas
+            // 
+            this.menuConsultasPersonas.Name = "menuConsultasPersonas";
+            this.menuConsultasPersonas.Size = new System.Drawing.Size(224, 26);
+            this.menuConsultasPersonas.Text = "Personas";
+            this.menuConsultasPersonas.Click += new System.EventHandler(this.menuConsultasPersonas_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // utilitariosToolStripMenuItem
+            // 
+            this.utilitariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarClaveToolStripMenuItem});
+            this.utilitariosToolStripMenuItem.Name = "utilitariosToolStripMenuItem";
+            this.utilitariosToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.utilitariosToolStripMenuItem.Text = "Utilitarios";
+            // 
+            // cambiarClaveToolStripMenuItem
+            // 
+            this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.cambiarClaveToolStripMenuItem.Text = "Cambiar clave";
+            // 
             // toolStrip
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -278,21 +344,6 @@ namespace EurekaApp2022
             this.toolStripStatusLabel.Size = new System.Drawing.Size(54, 20);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // menuProcesos
-            // 
-            this.menuProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuProcesosCrearCuenta});
-            this.menuProcesos.Name = "menuProcesos";
-            this.menuProcesos.Size = new System.Drawing.Size(81, 24);
-            this.menuProcesos.Text = "Procesos";
-            // 
-            // menuProcesosCrearCuenta
-            // 
-            this.menuProcesosCrearCuenta.Name = "menuProcesosCrearCuenta";
-            this.menuProcesosCrearCuenta.Size = new System.Drawing.Size(224, 26);
-            this.menuProcesosCrearCuenta.Text = "Crear cuenta";
-            this.menuProcesosCrearCuenta.Click += new System.EventHandler(this.menuProcesosCrearCuenta_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -346,6 +397,12 @@ namespace EurekaApp2022
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem menuProcesos;
         private System.Windows.Forms.ToolStripMenuItem menuProcesosCrearCuenta;
+        private System.Windows.Forms.ToolStripMenuItem tablasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuConsultas;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utilitariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarClaveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuConsultasPersonas;
     }
 }
 

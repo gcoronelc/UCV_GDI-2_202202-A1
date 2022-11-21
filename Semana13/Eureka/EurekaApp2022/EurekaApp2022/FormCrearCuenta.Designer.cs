@@ -139,6 +139,7 @@ namespace EurekaApp2022
             // 
             // txtEmpleado
             // 
+            this.txtEmpleado.Enabled = false;
             this.txtEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmpleado.Location = new System.Drawing.Point(224, 23);
             this.txtEmpleado.Name = "txtEmpleado";

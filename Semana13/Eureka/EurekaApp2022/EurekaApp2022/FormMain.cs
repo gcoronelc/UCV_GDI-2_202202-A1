@@ -102,5 +102,12 @@ namespace EurekaApp2022
             view.MdiParent = this;
             view.Show();
         }
+
+        private void menuConsultasPersonas_Click(object sender, EventArgs e)
+        {
+            FormPersonas view = FormPersonas.GetInstance();
+            view.MdiParent = this;
+            view.Show();
+        }
     }
 }
