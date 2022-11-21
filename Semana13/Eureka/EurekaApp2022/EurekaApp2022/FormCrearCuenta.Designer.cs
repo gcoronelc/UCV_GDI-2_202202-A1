@@ -39,13 +39,15 @@ namespace EurekaApp2022
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnProcesar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.txtEmpleado = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(116, 47);
+            this.label1.Location = new System.Drawing.Point(101, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 28);
             this.label1.TabIndex = 0;
@@ -55,7 +57,7 @@ namespace EurekaApp2022
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(116, 106);
+            this.label2.Location = new System.Drawing.Point(101, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 28);
             this.label2.TabIndex = 1;
@@ -65,7 +67,7 @@ namespace EurekaApp2022
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(116, 166);
+            this.label3.Location = new System.Drawing.Point(101, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 28);
             this.label3.TabIndex = 2;
@@ -75,7 +77,7 @@ namespace EurekaApp2022
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(116, 226);
+            this.label4.Location = new System.Drawing.Point(101, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 28);
             this.label4.TabIndex = 3;
@@ -84,7 +86,7 @@ namespace EurekaApp2022
             // txtCliente
             // 
             this.txtCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCliente.Location = new System.Drawing.Point(239, 44);
+            this.txtCliente.Location = new System.Drawing.Point(224, 84);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(269, 34);
             this.txtCliente.TabIndex = 4;
@@ -92,7 +94,7 @@ namespace EurekaApp2022
             // txtMoneda
             // 
             this.txtMoneda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMoneda.Location = new System.Drawing.Point(239, 103);
+            this.txtMoneda.Location = new System.Drawing.Point(224, 143);
             this.txtMoneda.Name = "txtMoneda";
             this.txtMoneda.Size = new System.Drawing.Size(269, 34);
             this.txtMoneda.TabIndex = 5;
@@ -100,7 +102,7 @@ namespace EurekaApp2022
             // txtImporte
             // 
             this.txtImporte.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtImporte.Location = new System.Drawing.Point(239, 163);
+            this.txtImporte.Location = new System.Drawing.Point(224, 203);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(269, 34);
             this.txtImporte.TabIndex = 6;
@@ -108,7 +110,7 @@ namespace EurekaApp2022
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtClave.Location = new System.Drawing.Point(239, 220);
+            this.txtClave.Location = new System.Drawing.Point(224, 260);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(269, 34);
             this.txtClave.TabIndex = 7;
@@ -135,11 +137,32 @@ namespace EurekaApp2022
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // txtEmpleado
+            // 
+            this.txtEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEmpleado.Location = new System.Drawing.Point(224, 23);
+            this.txtEmpleado.Name = "txtEmpleado";
+            this.txtEmpleado.Size = new System.Drawing.Size(269, 34);
+            this.txtEmpleado.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(101, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 28);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Empleado";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // FormCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 572);
+            this.Controls.Add(this.txtEmpleado);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.txtClave);
@@ -152,6 +175,7 @@ namespace EurekaApp2022
             this.Controls.Add(this.label1);
             this.Name = "FormCrearCuenta";
             this.Text = "CREAR CUENTA";
+            this.Load += new System.EventHandler(this.FormCrearCuenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +193,7 @@ namespace EurekaApp2022
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnProcesar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox txtEmpleado;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -41,11 +41,11 @@ namespace EurekaApp2022
                 FormMain main = new FormMain();
                 main.Show();
                 this.Hide();
-                //Cache.UserLoginCache.Codigo = empleado.Codigo;
-                //Cache.UserLoginCache.Paterno = empleado.Paterno;
-                //Cache.UserLoginCache.Materno = empleado.Materno;
-                //Cache.UserLoginCache.Nombre = empleado.Nombre;
-                //Cache.UserLoginCache.Usuario = empleado.Usuario;
+                Cache.UserLoginCache.Codigo = empleado.Codigo;
+                Cache.UserLoginCache.Paterno = empleado.Paterno;
+                Cache.UserLoginCache.Materno = empleado.Materno;
+                Cache.UserLoginCache.Nombre = empleado.Nombre;
+                Cache.UserLoginCache.Usuario = empleado.Usuario;
             }
             else
             {

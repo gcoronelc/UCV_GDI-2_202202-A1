@@ -39,7 +39,7 @@ namespace EurekaApp2022
             string clave = txtClave.Text;
             // Proceso
             CuentaService cuentaService = new CuentaService();
-            string cuenta = cuentaService.CrearCuenta(cliente, moneda, importe, clave, "0004");
+            string cuenta = cuentaService.CrearCuenta(cliente, moneda, importe, clave, Cache.UserLoginCache.Codigo);
             string mensaje = cuenta + " | " + cuentaService.Estado + " | " + cuentaService.Mensaje;
             MessageBox.Show("Resultado: " + mensaje);
         }
@@ -47,6 +47,16 @@ namespace EurekaApp2022
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormCrearCuenta_Load(object sender, EventArgs e)
+        {
+            txtEmpleado.Text = Cache.UserLoginCache.Codigo;
         }
     }
 }
