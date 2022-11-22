@@ -25,7 +25,7 @@ Avance de Unidad 3
 2.- Completar el informe 
 3.- Programación de los procesos de negocio con SP
 4.- Implementar la aplicación con Visual Studio y C#
-5.- Enlace de video de exposición
+5.- Exposición del proyecto en vivo.
 
 En la exposición se debe demostrar flujos de negocio.
 
