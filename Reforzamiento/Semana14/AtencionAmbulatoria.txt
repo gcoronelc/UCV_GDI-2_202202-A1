@@ -1,0 +1,22 @@
+ATENCION AMBULATORIA
+==========================================
+
+PROGRAMACION DE MEDICOS
+----------------------------
+Se programa al medico para que atienda ciertas 
+fechas del mes, y en un consultorio especifico.
+- Consultorio
+- Fecha
+- Rango de hora
+
+FLUJO DE LA ATENCION AMBULATORIA
+-----------------------------------
+1.- Sacar la cita (Estado: Pendiente)
+2.- Pagar la cita (Estado: Activa)
+3.- Atencion medica (Estado: Atendido)
+
+OTROS PROCESOS
+-----------------------------------
+- Anular cita
+- Postergar cita
+
