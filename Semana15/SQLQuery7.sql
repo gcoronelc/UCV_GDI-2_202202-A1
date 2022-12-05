@@ -1,0 +1,4 @@
+USE [VENTA]
+GO
+ALTER ROLE [ROL1] ADD MEMBER [panchito]
+GO

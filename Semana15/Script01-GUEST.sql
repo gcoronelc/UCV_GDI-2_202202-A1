@@ -21,3 +21,10 @@ go
 
 grant select on publicacion to guest;
 
+
+grant select on empleado to guest;
+go
+
+
+select * from empleado;
+
